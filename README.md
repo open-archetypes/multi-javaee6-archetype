@@ -1,4 +1,5 @@
-Generates a *very basic* multi module Java EE 6 project composed of a parent pom project and 4 nested modules : Java Utility, EJB 3.1, Web 3.0 and EAR 6.0. No JSF nor persistence involved
+Generates a *very basic* multi module Java EE 6 project composed of a parent pom project and 4 nested modules : 
+Java Utility, EJB 3.1, Web 3.0 and EAR 6.0. No JSF nor persistence are involved.
 
 
 To install in your local repository :
