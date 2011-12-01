@@ -3,7 +3,7 @@ Generates a *very basic* multi module Java EE 6 project composed of a parent pom
 
 To install in your local repository :
 
-    git clone git://github.com/open-archetypes/multi-javaee6-archetype.github
+    git clone git://github.com/open-archetypes/multi-javaee6-archetype.git
     cd multi-javaee6-archetype
     mvn clean install
 
