@@ -19,6 +19,9 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-jar-plugin</artifactId>
+                <version>2.3.2</version>
+                <!-- version 2.4 is not compatible with the mavenarchiver plugin for m2e :
+                    https://github.com/sonatype/m2eclipse-extras/issues/10 -->
 				<configuration>
 					<archive>
 						<manifest>

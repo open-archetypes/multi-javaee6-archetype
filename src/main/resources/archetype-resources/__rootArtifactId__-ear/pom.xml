@@ -15,7 +15,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-ear-plugin</artifactId>
-				<version>2.6</version>
+				<version>2.7</version>
 				<configuration>
 					<version>6</version>
 					<defaultLibBundleDir>lib</defaultLibBundleDir>
@@ -29,7 +29,7 @@
 						<webModule>
 							<groupId>${groupId}</groupId>
 							<artifactId>${rootArtifactId}-web</artifactId>
-							<contextRoot>/${rootArtifactId}</contextRoot>
+							<contextRoot>${rootArtifactId}</contextRoot>
 						</webModule>
 					</modules>
 				</configuration>
