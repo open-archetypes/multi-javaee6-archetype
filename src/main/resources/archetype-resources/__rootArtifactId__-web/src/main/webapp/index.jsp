@@ -1,14 +1,14 @@
-#set( $symbol_pound = '#' )
+﻿#set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page import="${package}.util.Version"%><html>
 <%
 	/*
-	 Just so I don't forget : when doing old school JSPs on JBoss AS7, 
+	 Just so I don't forget : when doing old school JSPs on JBoss AS7 (skip AS 7.1.1 as it ignores the following config), 
 	 one need to enable JSP hot reloading in <jbossas.home>/standalone/configuration/standalone.xml.
 	 See https://issues.jboss.org/browse/AS7-659
 
@@ -28,38 +28,44 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>${parentArtifactId} <%=Version.VALUE%></title>
 </head>
-<link rel="stylesheet"
-	href="http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css" />
-<style type="text/css">
-body {
-	padding-top: 60px;
-}
-</style>
+  <!-- Make this boostrap-based page stand out : using the slate theme from http://bootswatch.com/ (based off bootstrap 2.0.3) -->
+  <link rel="stylesheet" 	href="resources/css/bootswatch-slate/bootstrap.min.css" />
+  <style type="text/css">
+    body {
+      padding-top: 60px;
+    }
+  </style>
 </head>
 <body>
-	<div class="topbar">
-		<div class="fill">
-			<div class="container">
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+        	<div class="container">
 				<a class="brand" href="${symbol_dollar}{pageContext.request.contextPath}">${parentArtifactId}</a>
 			</div>
 		</div>
 	</div>
 	<div class="container">
-		<form action="greeting">
+		<form action="greeting" class="well form-inline">
 			<div class="clearfix">
 				<label for="name">What is your name?</label>
 				<div class="input">
-					<input type="text" name="name" id="name" /> <input type="submit"
-						class="btn info" name="go" value="go" />
+					<input type="text" name="name" id="name" class="input-small" /> 
+					<input type="submit" class="btn btn-primary btn-medium" name="go" value="go" />
 				</div>
 			</div>
 		</form>
-		<hr />
 		<c:if test="${symbol_dollar}{not empty requestScope.greeting}">
-			<div class="alert-message success">
+			<div class="alert alert-success fade in">
+				<a class="close" data-dismiss="alert" href="#">×</a>
+				<strong>Success</strong>
 				<p>${symbol_dollar}{requestScope.greeting}</p>
 			</div>
 		</c:if>
 	</div>
+	<!-- Use jQuery to enable bootstrap-alert (adding closing functionality to alert messages)-->
+	<!-- Using a CDN to get jQuery, as eclipse doesn't like it very much 
+	     and finds some JavaScript validation errors -->
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="resources/js/bootstrap-alert.js"></script>
 </body>
 </html>
