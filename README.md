@@ -12,7 +12,7 @@ To use in command line :
 
     mvn archetype:generate -Dfilter=multi-javaee6-archetype -U
    
-  Fill in the required properties and proceed
+  Fill in the required properties and proceed.
 
 To use in Eclipse : 
 
@@ -23,5 +23,5 @@ To use in Eclipse :
     Select multi-javaee6-archetype
     Next
    
-   Fill in the required properties and proceed
+   Fill in the required properties and proceed.
    
