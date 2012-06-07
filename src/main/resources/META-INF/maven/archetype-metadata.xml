@@ -12,7 +12,12 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<archetype-descriptor name="multi-javaee5-archetype">
+<archetype-descriptor name="multi-javaee6-archetype">
+ <requiredProperties>
+   <requiredProperty key="enable_openshift">
+     <defaultValue>yes</defaultValue>
+   </requiredProperty>
+  </requiredProperties>
   <modules>
     <module id="${rootArtifactId}-util" dir="__rootArtifactId__-util" name="${rootArtifactId}-util">
       <fileSets>
