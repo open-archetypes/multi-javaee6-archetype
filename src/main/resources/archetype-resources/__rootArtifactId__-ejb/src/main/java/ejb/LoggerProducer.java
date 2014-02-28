@@ -10,11 +10,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class LoggerProducer {
- 
+
     @Produces
     public Logger getLogger(InjectionPoint injectionPoint) {
-        return LoggerFactory.getLogger(
-                              injectionPoint.getBean().getBeanClass());
+        Class<?> clazz;
+        if (injectionPoint.getBean() != null) {
+            clazz = injectionPoint.getBean().getBeanClass();
+        } else {
+            clazz = injectionPoint.getMember().getDeclaringClass();
+        }
+        return LoggerFactory.getLogger(clazz);
     }
-    
 }
