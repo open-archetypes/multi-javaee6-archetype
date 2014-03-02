@@ -16,7 +16,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.openarchetypes</groupId>
   <artifactId>multi-javaee6-archetype</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
   <name>Basic multi module Java EE 6 archetype</name>
   <description>Generates a *very basic* multi module Java EE 6 project composed of a parent pom project and 4 nested modules : Java Utility, EJB 3.1, Web 3.0 and EAR 6.0. No JSF nor persistence involved</description>
@@ -32,7 +32,7 @@
     <connection>scm:git:https://github.com/open-archetypes/multi-javaee6-archetype.git</connection>
     <developerConnection>scm:git:git@github.com:open-archetypes/multi-javaee6-archetype.git</developerConnection>
     <url>https://github.com/open-archetypes/multi-javaee6-archetype</url>
-    <tag>v1.0.0</tag>
+    <tag>HEAD</tag>
   </scm>
   <build>
     <extensions>
