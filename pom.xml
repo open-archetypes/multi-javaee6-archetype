@@ -17,7 +17,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.openarchetypes</groupId>
   <artifactId>multi-javaee6-archetype</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
   <name>Basic multi module Java EE 6 archetype</name>
   <description>Generates a *very basic* multi module Java EE 6 project composed of a parent pom project and 4 nested modules : Java Utility, EJB 3.1, Web 3.0 and EAR 6.0. No JSF nor persistence involved</description>
@@ -29,6 +29,12 @@
           <distribution>repo</distribution>
       </license>
   </licenses>
+  <scm>
+    <connection>scm:git:https://github.com/open-archetypes/multi-javaee6-archetype.git</connection>
+    <developerConnection>scm:git:git@github.com:open-archetypes/multi-javaee6-archetype.git</developerConnection>
+    <url>https://github.com/open-archetypes/multi-javaee6-archetype</url>
+    <tag>HEAD</tag>
+  </scm>
   <build>
     <extensions>
       <extension>
@@ -43,9 +49,22 @@
         <version>${archetype.version}</version>
         <extensions>true</extensions>
       </plugin>
+      <plugin>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.4.2</version>
+        <configuration>
+          <useReleaseProfile>false</useReleaseProfile>
+        </configuration>
+    </plugin>
     </plugins>
   </build>
   <properties>
-  	<archetype.version>2.1</archetype.version>
+  	<archetype.version>2.2</archetype.version>
   </properties>
+  <distributionManagement>
+    <repository>
+      <id>bintray</id>
+      <url>https://api.bintray.com/maven/open-archetypes/maven/multi-javaee6-archetype</url>
+    </repository>
+  </distributionManagement>
 </project>
