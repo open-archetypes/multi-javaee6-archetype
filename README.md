@@ -49,7 +49,7 @@ How to use in command line
 --------------------------
 Open a terminal and copy/paste
 
-    mvn mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate -Dfilter=multi-javaee6-archetype -DarchetypeCatalog=http://open-archetypes.github.com/maven-repo/releases/
+    mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate -Dfilter=multi-javaee6-archetype -DarchetypeCatalog=http://open-archetypes.github.com/maven-repo/releases/
   
 Choose 1
 Fill in the required properties and proceed.
